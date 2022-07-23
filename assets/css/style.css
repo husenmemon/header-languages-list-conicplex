@@ -1,0 +1,124 @@
+/* Import google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+/* end Import google Font */
+
+header{
+    box-shadow: unset !important;
+}
+.main{
+    padding-top: 14em !important;
+}
+
+.hlcp-main{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 7px 0px inset;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    background: #FFF;
+    height: auto !important;
+    width: 100%;
+    padding: 10px 5.75%;
+    overflow-x: auto;
+    align-items: center;
+}
+.hlcp-heading{
+    padding-left: 16px;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+.hlcp-main-heading, .hlcp-sub-heading{
+    display: block;
+}
+.hlcp-main-heading{
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.hlcp-heading-on-scroll{
+    display: none;
+    margin-bottom: 10px;
+    padding-left: 16px;
+}
+.hlcp-heading-on-scroll span{
+    font-size: 14px;
+    font-weight: 600;
+}
+.hlcp-lang{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 16px;
+}
+.hlcp-lang-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 21px;
+}
+.hlcp-lang-link{
+    color: inherit !important;
+}
+.hlcp-lang-link, .hlcp-lang-link:hover{
+    text-decoration: none;
+}
+
+.hlcp-country-flag{
+    display: flex;
+    margin: 7px 0;
+}
+.hlcp-country-flag img{
+    border: 5px solid lightgray;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.hlcp-country-flag img:hover, .hlcp-lang-link:hover, .hlcp-lang-item:hover {
+    border-color: #3994ff !important;
+    color: #3994ff  !important;
+}
+.hlcp-lang-name{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Mobile Responsive Layout */
+@media only screen and (max-width: 600px) {
+    header{
+        box-shadow: 0px 0px 12px 0 rgb(0 0 0 / 25%) !important
+    }
+    .hlcp-main{
+        border-top: 1px solid #cbcbcb;
+        flex-direction: column; 
+        align-items: unset;
+        padding: 12px 5.75%;
+        box-shadow:unset;
+    }
+    .hlcp-heading{
+        display: none;
+    }
+    .hlcp-heading-on-scroll{
+        display: block;
+        padding-left: 0;
+    }
+    .hlcp-lang{
+        padding-left: 0;
+    }
+    .hlcp-lang-item{
+        flex-direction: row;
+        margin: 0;
+        margin-right: 12px;
+        padding: 5px 8px;
+        border: solid 1px #cbcbcb
+    }
+    .hlcp-country-flag{
+        margin: 0
+    }
+    .hlcp-country-flag img{
+        min-width: 20px;
+        height: 20px;
+        border: unset;
+        margin-right: 5px
+    }
+}
