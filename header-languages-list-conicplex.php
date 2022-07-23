@@ -167,15 +167,27 @@ function hlcp_custom_post_type() {
     
             var hlcp_html_output = '<div class="hlcp-main"><div class="hlcp-headings"><div class="hlcp-heading"> <span class="hlcp-main-heading">Ready to learn?</span> <span class="hlcp-sub-heading">Pick a language to get started!</span> </div> <div class="hlcp-heading-on-scroll"><span>Pick a language to speak...</span></div></div><div class="hlcp-lang">';
     <?php
+
+            $count_lang = 1;
+            $is_show = "";
             
             foreach($get_hlcp_lang as $hlcp_lang)
             {
-                
+                if($count_lang==6){ ?>
+                    hlcp_html_output+= '<a class="hlcp-lang-link hlcp-lang-more" href="https://www.fluentu.com/language/"><div class="hlcp-lang-item"><div class="hlcp-country-flag"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png"></div><div class="hlcp-lang-name">More...</div></div></a>';  
+                    <?php
+                }
+                if($count_lang>=6){
+                    $is_show = "hlcp-lang-show";
+                }
                 $hlcp_language_url = get_post_meta( $hlcp_lang->ID, 'hlcp_language_url',true);
             ?>
-                hlcp_html_output+= '<a class="hlcp-lang-link" href="<?php echo $hlcp_language_url; ?>"><div class="hlcp-lang-item"><div class="hlcp-country-flag"><img src="<?php echo get_the_post_thumbnail_url($hlcp_lang->ID, "thumbnail"); ?>"></div><div class="hlcp-lang-name"><?php echo $hlcp_lang->post_title; ?></div></div></a>';
+                hlcp_html_output+= '<a class="hlcp-lang-link <?php echo $is_show; ?>" href="<?php echo $hlcp_language_url; ?>"><div class="hlcp-lang-item"><div class="hlcp-country-flag"><img src="<?php echo get_the_post_thumbnail_url($hlcp_lang->ID, "thumbnail"); ?>"></div><div class="hlcp-lang-name"><?php echo $hlcp_lang->post_title; ?></div></div></a>';
 
-            <?php           
+            <?php          
+            
+            $count_lang++;
+
             }
             ?>
     

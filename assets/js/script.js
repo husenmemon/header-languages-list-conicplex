@@ -36,6 +36,9 @@ jQuery(document).ready(function ($) {
           border: "unset",
           "margin-right": "5px",
         });
+
+        $(".hlcp-lang-show").show();
+        $(".hlcp-lang-more").hide();
       } else {
         $header_style = "box-shadow: unset !important";
         $("header").attr("style", $header_style);
@@ -62,6 +65,8 @@ jQuery(document).ready(function ($) {
           border: "5px solid lightgray",
           "margin-right": "unset",
         });
+        $(".hlcp-lang-show").hide();
+        $(".hlcp-lang-more").show();
       }
     }
   });

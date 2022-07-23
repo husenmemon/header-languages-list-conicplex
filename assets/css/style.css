@@ -83,6 +83,10 @@ header{
     font-weight: 600;
 }
 
+.hlcp-lang-show{
+    display: none;
+}
+
 /* Mobile Responsive Layout */
 @media only screen and (max-width: 600px) {
     header{
@@ -120,5 +124,11 @@ header{
         height: 20px;
         border: unset;
         margin-right: 5px
+    }
+    .hlcp-lang-more{
+        display: none;
+    }
+    .hlcp-lang-show{
+        display: flex;
     }
 }
