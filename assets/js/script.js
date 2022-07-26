@@ -13,48 +13,52 @@ jQuery(document).ready(function ($) {
         $header_style =
           "box-shadow: 0px 0px 12px 0 rgb(0 0 0 / 25%) !important";
         $("header").attr("style", $header_style);
-        $(".hlcp-main").css({
+        /* $(".hlcp-main").css({
           "flex-direction": "column",
           "align-items": "unset",
           padding: "12px 5.75%",
           "box-shadow": "unset",
           "border-top": "1px solid #cbcbcb",
-        });
+        }); */
+        $(".hlcp-main").addClass("hlcp-auto-height");
+        $(".hlcp-main").addClass("hlcp-main-onscroll");
+        $(".hlcp-lang-item").addClass("hlcp-lang-item-onscroll");
+        $(".hlcp-country-flag").addClass("hlcp-country-flag-onscroll");
         $(".hlcp-heading").hide();
         $(".hlcp-heading-on-scroll").show();
-        $(".hlcp-lang-item").css({
+        /* $(".hlcp-lang-item").css({
           "flex-direction": "row",
           margin: "0",
           "margin-right": "12px",
           padding: "5px 8px",
           border: "solid 1px #cbcbcb",
-        });
-        $(".hlcp-country-flag").css({ margin: "0" });
-        $(".hlcp-country-flag img").css({
+        }); */
+        /* $(".hlcp-country-flag").css({ margin: "0" }); */
+        /* $(".hlcp-country-flag img").css({
           "min-width": "20px",
           height: "20px",
           border: "unset",
           "margin-right": "5px",
-        });
+        }); */
 
         $(".hlcp-lang-show").show();
         $(".hlcp-lang-more").hide();
       } else {
         $header_style = "box-shadow: unset !important";
         $("header").attr("style", $header_style);
-        $(".hlcp-main").css({
+        /* $(".hlcp-main").css({
           "flex-direction": "row",
           "align-items": "center",
-          padding: "10px 5.75%",
+          padding: "10px 0px 10px 5.75%",
           "box-shadow": "rgba(0, 0, 0, 0.25) 0px 0px 7px 0px inset",
           "max-width": "59em",
           "border-top": "unset",
-        });
+        }); */
         $(".hlcp-heading").show();
         $(".hlcp-heading-on-scroll").hide();
-        $(".hlcp-lang-item").css({
+        /* $(".hlcp-lang-item").css({
           "flex-direction": "column",
-          margin: "10px 21px",
+          margin: "10px 17px",
           padding: "unset",
           border: "unset",
         });
@@ -62,9 +66,26 @@ jQuery(document).ready(function ($) {
         $(".hlcp-country-flag img").css({
           "min-width": "60px",
           height: "60px",
-          border: "5px solid lightgray",
+          border: "4px solid #e4e5e7",
           "margin-right": "unset",
-        });
+        }); */
+        $(".hlcp-main").removeClass("hlcp-auto-height");
+        $(".hlcp-main").removeClass("hlcp-main-onscroll");
+        $(".hlcp-lang-item").removeClass("hlcp-lang-item-onscroll");
+        $(".hlcp-country-flag").removeClass("hlcp-country-flag-onscroll");
+
+        // $(".hlcp-lang-item:hover img").css({
+        //   "min-width": "68px",
+        //   height: "68px",
+        // });
+
+        // $(".hlcp-lang-item").hover(function () {
+        //   $(".hlcp-lang-item img").css({
+        //     "min-width": "68px",
+        //     height: "68px",
+        //   });
+        // });
+
         $(".hlcp-lang-show").hide();
         $(".hlcp-lang-more").show();
       }

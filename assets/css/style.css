@@ -10,14 +10,15 @@ header{
 }
 
 .hlcp-main{
+    justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 7px 0px inset;
     display: flex;
     flex-direction: row;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Proximanova", sans-serif;
     background: #FFF;
-    height: auto !important;
+    height: 148px !important;
     width: 100%;
-    padding: 10px 5.75%;
+    padding: 10px 0px 10px 5.75%;
     overflow-x: auto;
     align-items: center;
 }
@@ -28,10 +29,10 @@ header{
 }
 .hlcp-main-heading, .hlcp-sub-heading{
     display: block;
+    color: #000000;
 }
 .hlcp-main-heading{
-    color: #000000;
-    font-size: 24px;
+    font-size: 27px;
     font-weight: 600;
     margin: 10px 0;
 }
@@ -41,6 +42,7 @@ header{
     padding-left: 16px;
 }
 .hlcp-heading-on-scroll span{
+    color: #000000;
     font-size: 14px;
     font-weight: 600;
 }
@@ -49,13 +51,14 @@ header{
     flex-direction: row;
     align-items: center;
     padding-left: 16px;
+    padding-right: 16px;
 }
 .hlcp-lang-item{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px 21px;
+    margin: 10px 17px;
 }
 .hlcp-lang-link{
     color: inherit !important;
@@ -69,22 +72,88 @@ header{
     margin: 7px 0;
 }
 .hlcp-country-flag img{
-    border: 5px solid lightgray;
-    min-width: 60px;
+    border: 4px solid #e4e5e7;
+    width: 60px;
     height: 60px;
+    object-fit: cover;
     border-radius: 50%;
 }
-.hlcp-country-flag img:hover, .hlcp-lang-link:hover, .hlcp-lang-item:hover {
+
+/* .hlcp-country-flag img:hover, .hlcp-lang-link:hover, .hlcp-lang-item:hover {
     border-color: #3994ff !important;
     color: #3994ff  !important;
 }
+
+.hlcp-country-flag img:hover{
+    min-width: 68px;
+    height: 68px;
+} */
+
 .hlcp-lang-name{
     font-size: 14px;
     font-weight: 600;
+    color: #000000;
+}
+
+.hlcp-lang-item:hover .hlcp-lang-name{
+    color: #3994ff;
+}
+
+.hlcp-lang-item:hover img{
+    width: 68px;
+    height: 68px;
+    border-color: #3994ff !important;
+    color: #3994ff  !important;
 }
 
 .hlcp-lang-show{
     display: none;
+}
+
+.hlcp-auto-height{
+    height: auto !important;
+}
+
+/* .hlcp-main::-webkit-scrollbar {
+    height: 5px;             
+    width: 4px;              
+    border: 1px solid #ffffff;
+}
+
+.hlcp-main::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.hlcp-main::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #777777;
+} */
+
+.hlcp-main-onscroll{
+    flex-direction: column !important;
+    align-items: unset !important;
+    padding: 12px 5.75% !important;
+    box-shadow: unset !important;
+    border-top: 1px solid #cbcbcb !important;
+}
+
+.hlcp-lang-item-onscroll{
+    flex-direction: row !important;
+    margin: 0 !important;
+    margin-right: 12px !important;
+    padding: 5px 8px !important;
+    border: solid 1px #cbcbcb !important;
+}
+
+.hlcp-country-flag-onscroll{
+    margin: 0 !important;
+}
+.hlcp-country-flag-onscroll img{
+    min-width: 20px !important;
+    height: 20px !important;
+    border: unset !important;
+    margin-right: 5px !important;
 }
 
 /* Mobile Responsive Layout */
@@ -98,6 +167,7 @@ header{
         align-items: unset;
         padding: 12px 5.75%;
         box-shadow:unset;
+        height: auto !important;
     }
     .hlcp-heading{
         display: none;
@@ -114,7 +184,7 @@ header{
         margin: 0;
         margin-right: 12px;
         padding: 5px 8px;
-        border: solid 1px #cbcbcb
+        border: solid 1px #cbcbcb;
     }
     .hlcp-country-flag{
         margin: 0
@@ -123,7 +193,7 @@ header{
         min-width: 20px;
         height: 20px;
         border: unset;
-        margin-right: 5px
+        margin-right: 5px;
     }
     .hlcp-lang-more{
         display: none;
