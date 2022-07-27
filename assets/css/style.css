@@ -73,7 +73,8 @@ header{
 }
 .hlcp-country-flag img{
     border: 4px solid #e4e5e7;
-    width: 60px;
+	min-width: 60px;
+	width: 60px;
     height: 60px;
     object-fit: cover;
     border-radius: 50%;
@@ -100,10 +101,12 @@ header{
 }
 
 .hlcp-lang-item:hover img{
-    width: 68px;
+    min-width: 68px;
+	width: 68px;
     height: 68px;
     border-color: #3994ff !important;
     color: #3994ff  !important;
+	transition: 200ms;
 }
 
 .hlcp-lang-show{
@@ -200,5 +203,9 @@ header{
     }
     .hlcp-lang-show{
         display: flex;
+    }
+	.hlcp-country-flag img:hover{
+        min-width: 20px;
+        height: 20px;
     }
 }
